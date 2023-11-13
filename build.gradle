@@ -114,12 +114,24 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-	
+	maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' 
+    }
 }
 
 dependencies {
     minecraft "net.neoforged:forge:${minecraft_version}-${neo_version}"
     
+    // Sanity: DIM (Required)
+    implementation fg.deobf("curse.maven:sanity-descent-into-madness-876448:${sanitydim_file}")
+    runtimeOnly fg.deobf("software.bernie.geckolib:geckolib-forge-1.20.1:${geckolib_version}")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -133,6 +145,7 @@ tasks.withType(ProcessResources).configureEach {
             loader_version_range: loader_version_range,
             mod_id              : mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors         : mod_authors, mod_description: mod_description, pack_format_number: pack_format_number,
+            sanitydim_version_range: sanitydim_version_range,
     ]
     inputs.properties replaceProperties
 
