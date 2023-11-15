@@ -3,6 +3,7 @@ package com.quantumzizo.absoluteinsanity;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
+import com.quantumzizo.absoluteinsanity.event.EventHandler;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,7 @@ public class AbsoluteInsanity {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		
 		MinecraftForge.EVENT_BUS.register(this);
+		MinecraftForge.EVENT_BUS.register(new EventHandler());
 		
 		modEventBus.addListener(this::commonSetup);
 	}
