@@ -1,5 +1,8 @@
 package com.quantumzizo.absoluteinsanity;
 
+import com.quantumzizo.absoluteinsanity.config.Config;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.config.ModConfig;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -15,10 +18,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class AbsoluteInsanity {
 	public static final String MOD_ID = "absoluteinsanity";
 	
-	private static final Logger LOGGER = LogUtils.getLogger();
+	public static final Logger LOGGER = LogUtils.getLogger();
 	
 	public AbsoluteInsanity() {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.CONFIG, "absoluteinsanity.toml");
 		
 		MinecraftForge.EVENT_BUS.register(this);
 		MinecraftForge.EVENT_BUS.register(new EventHandler());

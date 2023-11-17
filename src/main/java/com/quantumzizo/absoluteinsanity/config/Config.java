@@ -18,5 +18,8 @@ public class Config {
 		HYPERTHERMIC_SANITY = BUILDER
 				.comment("Sanity gain per second when the player is hyperthermic or near hyperthermic")
 				.defineInRange("hyperthermic", -1.0, -100.0, 100.0);
+		BUILDER.pop();
+
+		CONFIG = BUILDER.build();
 	}
 }

@@ -3,6 +3,7 @@ package com.quantumzizo.absoluteinsanity.sanity;
 import java.util.Arrays;
 import java.util.List;
 
+import com.quantumzizo.absoluteinsanity.AbsoluteInsanity;
 import com.quantumzizo.absoluteinsanity.sanity.passive.Hyperthermic;
 
 import croissantnova.sanitydim.capability.*;
@@ -29,7 +30,7 @@ public final class SecondarySanityProcessor {
 		for (IPassiveSanitySource pss : SECONDARY_PSS) {
 			float val = pss.get(player, sanity, dim);
 			val *= SanityProcessor.getSanityMultiplier(player, val);
-			passive += val;
+			passive += -val / 2000f;
 		}
 		
 		ItemStack headItem = player.getItemBySlot(EquipmentSlot.HEAD);
@@ -46,10 +47,11 @@ public final class SecondarySanityProcessor {
 		player.getCapability(SanityProvider.CAP).ifPresent(s -> {
 			float passive = calcPassive(player, s);
 			float snapshot = s.getSanity();
-			
+
 			s.setSanity(s.getSanity() + passive);
 			if(s instanceof IPassiveSanity ps) {
-				ps.setPassiveIncrease(snapshot != s.getSanity() ? passive : 0);
+				float secondaryPassiveIncrease = (snapshot != s.getSanity() ? passive : 0);
+				ps.setPassiveIncrease(ps.getPassiveIncrease()+secondaryPassiveIncrease);
 			}
 		});
 	}
