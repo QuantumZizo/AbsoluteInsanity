@@ -6,6 +6,7 @@ import java.util.List;
 import com.quantumzizo.absoluteinsanity.AbsoluteInsanity;
 import com.quantumzizo.absoluteinsanity.sanity.passive.Hyperthermic;
 
+import com.quantumzizo.absoluteinsanity.sanity.passive.Thirsty;
 import croissantnova.sanitydim.capability.*;
 import croissantnova.sanitydim.config.ConfigProxy;
 import croissantnova.sanitydim.passive.IPassiveSanitySource;
@@ -18,7 +19,8 @@ import net.minecraft.world.item.ItemStack;
 
 public final class SecondarySanityProcessor {
 	public static final List<IPassiveSanitySource> SECONDARY_PSS = Arrays.asList(
-			new Hyperthermic()
+			new Hyperthermic(),
+			new Thirsty()
 	);
 	
 	private SecondarySanityProcessor() {}

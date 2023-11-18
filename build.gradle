@@ -137,6 +137,8 @@ dependencies {
     
     // Cold Sweat
     implementation fg.deobf("curse.maven:cold-sweat-506194:${coldsweat_file}")
+    // Thirst Was Taken
+    implementation fg.deobf("curse.maven:thirst-was-taken-679270:${thirstwastaken_file}")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

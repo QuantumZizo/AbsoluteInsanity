@@ -1,43 +1,25 @@
+# Absolute Insanity
+A Minecraft addon for Sanity: Descent Into Madness that allows various other mods' features to make the player (in)sane.
 
-Installation information
-=======
+## Requirements
+[Sanity: Descent Into Madness](https://modrinth.com/mod/sanity-descent-into-madness) 1.1.0 for Minecraft 1.20.1
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions at [github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Description 
+This mod allows other mods, usually with the survival aspect, to modify the player's sanity with their own mechanics.
+For example, take the mod Cold Sweat, a Minecraft mod which adds a temperature system. 
+My mod would lower the player's sanity if their temperature got too high,
+imitating the real life fact that hallucinations and other mental tricks can be played on the mind when hyperthermic.
+As you can see, the sanity changes added by this mod are based on what would happen in real life.
+Take the mod Thirst Was Taken for another example. Being low on thirst would have a harsher effect on sanity compared to just being hungry.
+Aside from just mental tricks played on the mind when the body is in a low condition,
+sanity is also affected by encounters with horrifying beasts, such as the cave dweller (Not added yet),
+or even encounters with Herobrine himself (Not added yet).
+A whole list of these features can be found on this mod's [wiki](https://github.com/QuantumZizo/AbsoluteInsanity/wiki).
 
-Once you have your clone, you can initialize your copy.
+## Details
+This mod is very configurable, see it's config file.
+Please feel free to use this in your modpacks to forever enhance your survival or horror playing experience.
 
-Setup Process:
---------
-
-Step 1: Open your command-line and browse to the folder where you extracted cloned your copy of this repository to.
-
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: `gradlew genEclipseRuns` (`./gradlew genEclipseRuns` if you are on Mac/Linux)
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run `gradlew eclipse` to generate the project.
-
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: `gradlew genIntellijRuns` (`./gradlew genIntellijRuns` if you are on Mac/Linux)
-4. Refresh the Gradle Project in IDEA if required.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can 
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license, if you do not agree with it you can change your mapping names to other crowdsourced names in your 
-build.gradle. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Credits
+croissantnova - For literally providing the code and mod that this mod is based on,
+and actually helping me program it. (He's the creator of Sanity: DIM)

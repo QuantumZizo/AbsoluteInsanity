@@ -7,6 +7,8 @@ public class Config {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	
 	public static final ForgeConfigSpec.DoubleValue HYPERTHERMIC_SANITY;
+	public static final ForgeConfigSpec.IntValue THIRST_THRESHOLD;
+	public static final ForgeConfigSpec.DoubleValue THIRSTY;
 	
 	static {
 		BUILDER.comment(
@@ -16,8 +18,14 @@ public class Config {
 				.push("absoluteinsanity");
 		
 		HYPERTHERMIC_SANITY = BUILDER
-				.comment("Sanity gain per second when the player is hyperthermic or near hyperthermic")
+				.comment("From: Cold Sweat", "Sanity gain per second when the player is hyperthermic or near hyperthermic")
 				.defineInRange("hyperthermic", -1.0, -100.0, 100.0);
+		THIRST_THRESHOLD = BUILDER
+				.comment("From: Thirst Was Taken", "Players' sanity will start getting affected with thirst levels at and below this threshold (in half thirst droplets)")
+				.defineInRange("thirst_threshold", 8, 0, 20);
+		THIRSTY = BUILDER
+				.comment("From: Thirst Was Taken", "Players with thirst levels at and below <thirst_threshold> gain this amount of sanity per second")
+				.defineInRange("thirsty", -0.5, -100.0, 100.0);
 		BUILDER.pop();
 
 		CONFIG = BUILDER.build();
