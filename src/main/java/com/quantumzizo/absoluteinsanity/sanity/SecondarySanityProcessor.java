@@ -1,9 +1,9 @@
 package com.quantumzizo.absoluteinsanity.sanity;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.quantumzizo.absoluteinsanity.AbsoluteInsanity;
 import com.quantumzizo.absoluteinsanity.sanity.passive.Hyperthermic;
 
 import com.quantumzizo.absoluteinsanity.sanity.passive.Thirsty;
@@ -18,14 +18,16 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 
 public final class SecondarySanityProcessor {
-	public static final List<IPassiveSanitySource> SECONDARY_PSS = Arrays.asList(
+	public static final List<IPassiveSanitySource> SECONDARY_PSS = new ArrayList<>(Arrays.asList(
 			new Hyperthermic(),
 			new Thirsty()
-	);
-	
-	private SecondarySanityProcessor() {}
-	
-	private static float calcPassive(ServerPlayer player, ISanity sanity) {
+	));
+
+	private SecondarySanityProcessor() {
+
+	}
+
+	/* private static float calcPassive(ServerPlayer player, ISanity sanity) {
 		ResourceLocation dim = player.level().dimension().location();
 		float passive = 0;
 		
@@ -42,7 +44,7 @@ public final class SecondarySanityProcessor {
 		return passive;
 	}
 	
-	public static void secondaryTickPlayer(final ServerPlayer player) {
+	 public static void secondaryTickPlayer(final ServerPlayer player) {
 		if(player == null || player.isCreative() || player.isSpectator())
 			return;
 		
@@ -56,5 +58,5 @@ public final class SecondarySanityProcessor {
 				ps.setPassiveIncrease(ps.getPassiveIncrease()+secondaryPassiveIncrease);
 			}
 		});
-	}
+	} */
 }
