@@ -16,7 +16,7 @@ public class Hyperthermic implements IPassiveSanitySource {
 		if(ModList.get().isLoaded("cold_sweat")) {
 			double playerTemp = Temperature.get(player, Temperature.Type.BODY);
 			if (playerTemp >= 50)
-				return Config.HYPERTHERMIC_SANITY.get().floatValue();
+				return -Config.HYPERTHERMIC_SANITY.get().floatValue()/2000;
 		}
 		return 0;
 	}

@@ -21,7 +21,7 @@ public class Thirsty implements IPassiveSanitySource {
             });
         }
         if (thirst.get() <= Config.THIRST_THRESHOLD.get())
-            return Config.THIRSTY.get().floatValue();
+            return -Config.THIRSTY.get().floatValue()/2000;
         return 0;
     }
 }

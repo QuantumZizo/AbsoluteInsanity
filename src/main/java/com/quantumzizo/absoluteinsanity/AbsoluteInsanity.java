@@ -1,6 +1,10 @@
 package com.quantumzizo.absoluteinsanity;
 
 import com.quantumzizo.absoluteinsanity.config.Config;
+import com.quantumzizo.absoluteinsanity.sanity.passive.Hyperthermic;
+import com.quantumzizo.absoluteinsanity.sanity.passive.Thirsty;
+import croissantnova.sanitydim.SanityProcessor;
+import croissantnova.sanitydim.passive.IPassiveSanitySource;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 import org.slf4j.Logger;
@@ -13,6 +17,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Mod(AbsoluteInsanity.MOD_ID)
 public class AbsoluteInsanity {
@@ -32,6 +40,17 @@ public class AbsoluteInsanity {
 	}
 	
 	private void commonSetup(final FMLCommonSetupEvent event) {
-		LOGGER.info("Don't ya just love going insane?");
+		injectPassiveSanitySources();
+		LOGGER.info("Passive sanity sources appended.");
+		LOGGER.debug("Passive sanity sources are: " + Arrays.toString(SanityProcessor.PASSIVE_SANITY_SOURCES.toArray()));
+	}
+
+	private void injectPassiveSanitySources() {
+		List<IPassiveSanitySource> SECONDARY_PSS = Arrays.asList(
+				new Hyperthermic(),
+				new Thirsty()
+		);
+
+		SanityProcessor.PASSIVE_SANITY_SOURCES.addAll(SECONDARY_PSS);
 	}
 }
