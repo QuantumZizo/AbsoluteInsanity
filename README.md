@@ -1,5 +1,5 @@
 # IMPORTANT
-Development for this mod has been put on hiatus because my PR on the main mod's repo has yet to be accepted. This PR fixes all the issues around adding new sanity sources but due to the fact that it hasn't been accepted, I have had to use a local, patched version of Sanity: DIM for my uses in development. This is simply a hassle to do and there isn't a point if a version with this patch is never released. If something changes and I am alerted to it, development for this mod will continue but currently, I have stopped developing this mod.
+Development for this mod has been put on hiatus because my PR on the main mod's repo has yet to be accepted. This PR fixes all the issues around adding new sanity sources but due to the fact that it hasn't been accepted, I have had to use a local, patched version of Sanity: DIM for my uses in development. This is simply a hassle to do and there isn't a point developing this addon if a version of Sanity: DIM with this patch is never released. If something changes and I am alerted to it, development for this mod will continue, but as of a while ago, I have stopped developing this mod.
 
 # Absolute Insanity
 A Minecraft addon for Sanity: Descent Into Madness that allows various other mods' features to make the player more (in)sane.
@@ -17,7 +17,7 @@ Take the mod Thirst Was Taken for another example. Being low on thirst would hav
 Aside from just mental tricks played on the mind when the body is in a low condition,
 sanity is also affected by encounters with horrifying beasts, such as the cave dweller (Not added yet),
 or even encounters with Herobrine himself (Not added yet).
-A whole list of these features can be found on this mod's [wiki](https://github.com/QuantumZizo/AbsoluteInsanity/wiki).
+A whole list of these features can be found on this mod's [wiki](https://github.com/QuantumZizo/AbsoluteInsanity/wiki) (Not added yet).
 
 ## Details
 This mod is very configurable, see it's config file.
