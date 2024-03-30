@@ -1,5 +1,8 @@
+# IMPORTANT
+Development for this mod has been put on hiatus because my PR on the main mod's repo has yet to be accepted. This PR fixes all the issues around adding new sanity sources but due to the fact that it hasn't been accepted, I have had to use a local, patched version of Sanity: DIM for my uses in development. This is simply a hassle to do and there isn't a point if a version with this patch is never released. If something changes and I am alerted to it, development for this mod will continue but currently, I have stopped developing this mod.
+
 # Absolute Insanity
-A Minecraft addon for Sanity: Descent Into Madness that allows various other mods' features to make the player (in)sane.
+A Minecraft addon for Sanity: Descent Into Madness that allows various other mods' features to make the player more (in)sane.
 
 ## Requirements
 [Sanity: Descent Into Madness](https://modrinth.com/mod/sanity-descent-into-madness) 1.1.0 for Minecraft 1.20.1
@@ -21,5 +24,5 @@ This mod is very configurable, see it's config file.
 Please feel free to use this in your modpacks to forever enhance your survival or horror playing experience.
 
 ## Credits
-croissantnova - For literally providing the code and mod that this mod is based on,
+croissantnova - For providing the code and mod that this mod is based on,
 and actually helping me program it. (He's the creator of Sanity: DIM)
