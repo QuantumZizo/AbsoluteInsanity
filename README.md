@@ -1,5 +1,8 @@
 # IMPORTANT
-Development for this mod has been put on hiatus because my PR on the main mod's repo has yet to be accepted. This PR fixes all the issues around adding new sanity sources but due to the fact that it hasn't been accepted, I have had to use a local, patched version of Sanity: DIM for my uses in development. This is simply a hassle to do and there isn't a point developing this addon if a version of Sanity: DIM with this patch is never released. If something changes and I am alerted to it, development for this mod will continue, but as of a while ago, I have stopped developing this mod.
+Development for this addon has been put on hiatus because development on Sanity: Descent into Madness has ceased for now. 
+There are some critical changes to the base mod's internal infrastructure that if made, would allow additions to the mod to be much more efficient and smoother to code. 
+croissantnova has stated himself that he eventually intends to resume development on Sanity: DIM, and when that happens, I may come back to this addon given that the previously mentioned changes are made. 
+Until then, this mod will not be recieving any updates. See ya then~
 
 # Absolute Insanity
 A Minecraft addon for Sanity: Descent Into Madness that allows various other mods' features to make the player more (in)sane.
